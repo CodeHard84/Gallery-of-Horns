@@ -28,7 +28,19 @@ Finish time: 9:44PM
 
 Actual time needed to complete: 4 Minutes
 
-## Feature Addition Template
+### Feature 3: Bootstrap
+
+Number and name of feature: Bootstrap
+
+Estimate of time needed to complete: 20 Minutes
+
+Start time: 9:47PM
+
+Finish time: 10:24PM
+
+Actual time needed to complete: 37 Minutes
+
+### Feature Addition Template
 
 Number and name of feature: ________________________________
 
