@@ -12,29 +12,28 @@
 import HornedBeast from "./HornedBeast";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { Container } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import React from "react";
 
-export default function Gallery(props) {
+export default class Gallery extends React.Component {
+  render() {
+    const { jsonData } = this.props;
+    const beastComponents = jsonData.map(beast => (
+      <Col key={beast._id} xs={12} sm={6} lg={4}>
+        <HornedBeast
+          title={beast.title}
+          imageUrl={beast.image_url}
+          description={beast.description}
+        />
+      </Col>
+    ));
 
-  const hornedBeasts = props.jsonData;
-  const beastComponents = hornedBeasts.map(beast => (
-    // Study more on the React grid.
-    <Col key={beast._id} xs={4} sm={4} md={4}>
-      <HornedBeast
-        title={beast.title}
-        imageUrl={beast.image_url}
-        description={beast.description}
-      />
-    </Col>
-  ));
-
-  return (
-    <div>
+    return (
       <Container>
-        <Row className="justify-content-center">
+        <Row className="justify-content-center g-4">
           {beastComponents}
         </Row>
       </Container>
-    </div>
-  );
+    );
+  }
 }
