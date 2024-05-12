@@ -10,7 +10,6 @@
 // },
 
 import HornedBeast from "./HornedBeast";
-// import hornedBeasts from "../data/data.json";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
