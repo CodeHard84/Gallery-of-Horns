@@ -7,6 +7,7 @@ export default function HornedBeast(props) {
 
   function handleClick() {
     setLikes(likes + 1);
+    // Probably going to popup the modal here.
   }
 
   return (

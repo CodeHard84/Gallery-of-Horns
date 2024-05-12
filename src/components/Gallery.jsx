@@ -10,11 +10,12 @@
 // },
 
 import HornedBeast from "./HornedBeast";
-import hornedBeasts from "../data/data.json";
+// import hornedBeasts from "../data/data.json";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-export default function Gallery() {
+export default function Gallery(props) {
+    const hornedBeasts = props.jsonData;
     const beastComponents = hornedBeasts.map(beast => (
       // Study more on the React grid.
       <Col key={beast._id} xs={4} sm={4} md={4}>
