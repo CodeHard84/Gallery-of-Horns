@@ -1,7 +1,7 @@
 import Image from "react-bootstrap/Image";
 import { useState } from "react";
 
-function HornedBeast(props) {
+export default function HornedBeast(props) {
 
   const [likes, setLikes] = useState(0);
 
@@ -18,5 +18,3 @@ function HornedBeast(props) {
     </div>
   );
 }
-
-export default HornedBeast;
