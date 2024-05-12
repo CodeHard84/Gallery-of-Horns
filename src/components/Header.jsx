@@ -1,7 +1,15 @@
-function Header() {
-    return(
-        <h1>Gallery of Horns</h1>
-    )
-}
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+import React from 'react';
 
-export default Header;
+export default class Header extends React.Component {
+    render() {
+        return (
+            <Navbar bg="dark" variant="dark" style={{ marginBottom: '10px' }}>
+                <Container>
+                    <Navbar.Brand href="#home">{this.props.title}</Navbar.Brand>
+                </Container>
+            </Navbar>
+        );
+    }
+}
