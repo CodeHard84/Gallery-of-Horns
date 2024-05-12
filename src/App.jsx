@@ -13,7 +13,9 @@ function App() {
   return (
     <>
       <Header title={title} />
-      <Gallery jsonData={jsonData} />
+      <Gallery
+        jsonData={jsonData}
+      />
       <Footer />
     </>
   );
