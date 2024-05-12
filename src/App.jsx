@@ -5,9 +5,13 @@ import Header from "./components/Header";
 import jsonData from "./data/data.json";
 
 function App() {
+
+  const title = "Gallery of Horns";
+  document.title = title;
+
   return (
     <>
-      <Header />
+      <Header title={title}/>
       <Gallery jsonData={jsonData}/>
       <Footer />
     </>

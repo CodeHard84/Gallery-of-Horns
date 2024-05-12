@@ -12,8 +12,10 @@
 import HornedBeast from "./HornedBeast";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { Container } from "react-bootstrap";
 
 export default function Gallery(props) {
+
     const hornedBeasts = props.jsonData;
     const beastComponents = hornedBeasts.map(beast => (
       // Study more on the React grid.
@@ -27,8 +29,10 @@ export default function Gallery(props) {
     ));
 
     return (
+      <Container>
       <Row className="justify-content-center">
         {beastComponents}
       </Row>
+      </Container>
     );
 }
