@@ -2,6 +2,7 @@ import Image from "react-bootstrap/Image";
 import { useState } from "react";
 import React from "react";
 import Card from "react-bootstrap/Card";
+import SelectedBeast from "./SelectedBeast";
 
 export default class HornedBeast extends React.Component {
   constructor(props) {
@@ -12,14 +13,17 @@ export default class HornedBeast extends React.Component {
   }
 
   handleClick = () => {
+    this.props.onBeastSelection();
     this.setState(prevState => ({
-      likes: prevState.likes + 1
+      likes: prevState.likes + 1,
     }));
   }
 
   render() {
     return (
       <Card
+        style={{ cursor: "pointer" }}
+        onClick={this.handleClick}
         bg="light"
         border="secondary"
         className="h-100"
@@ -33,7 +37,7 @@ export default class HornedBeast extends React.Component {
           <Card.Title>{this.props.title}</Card.Title>
           <Card.Text>{this.props.description}</Card.Text>
         </Card.Body>
-        <Card.Footer style={{ cursor: "pointer" }} onClick={this.handleClick}>
+        <Card.Footer>
           Favorites: ❤️ = {this.state.likes}
         </Card.Footer>
       </Card>
