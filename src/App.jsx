@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import Header from "./components/Header";
 import jsonData from "./data/data.json";
+import { useState } from 'react';
 
 function App() {
 
@@ -11,8 +12,8 @@ function App() {
 
   return (
     <>
-      <Header title={title}/>
-      <Gallery jsonData={jsonData}/>
+      <Header title={title} />
+      <Gallery jsonData={jsonData} />
       <Footer />
     </>
   );

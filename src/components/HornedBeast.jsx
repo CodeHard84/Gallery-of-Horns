@@ -10,11 +10,11 @@ export default function HornedBeast(props) {
   }
 
   return (
-    <div onClick={handleClick}>
+    <span onClick={handleClick}>
       <h2>{props.title}</h2>
       <Image src={props.imageUrl} alt={props.description} title={props.title} rounded fluid></Image>
       <p>{props.description}</p>
       <h3>Favorites: {"❤️"} = {likes}</h3>
-    </div>
+    </span>
   );
 }

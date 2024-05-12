@@ -16,23 +16,25 @@ import { Container } from "react-bootstrap";
 
 export default function Gallery(props) {
 
-    const hornedBeasts = props.jsonData;
-    const beastComponents = hornedBeasts.map(beast => (
-      // Study more on the React grid.
-      <Col key={beast._id} xs={4} sm={4} md={4}>
-        <HornedBeast 
-          title={beast.title}
-          imageUrl={beast.image_url}
-          description={beast.description}
-        />
-      </Col>
-    ));
+  const hornedBeasts = props.jsonData;
+  const beastComponents = hornedBeasts.map(beast => (
+    // Study more on the React grid.
+    <Col key={beast._id} xs={4} sm={4} md={4}>
+      <HornedBeast
+        title={beast.title}
+        imageUrl={beast.image_url}
+        description={beast.description}
+      />
+    </Col>
+  ));
 
-    return (
+  return (
+    <div>
       <Container>
-      <Row className="justify-content-center">
-        {beastComponents}
-      </Row>
+        <Row className="justify-content-center">
+          {beastComponents}
+        </Row>
       </Container>
-    );
+    </div>
+  );
 }
