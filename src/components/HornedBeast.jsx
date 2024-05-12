@@ -1,8 +1,5 @@
 import Image from "react-bootstrap/Image";
-import Container from "react-bootstrap/Container";
 import { useState } from "react";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 
 function HornedBeast(props) {
 
@@ -15,11 +12,9 @@ function HornedBeast(props) {
   return (
     <div onClick={handleClick}>
       <h2>{props.title}</h2>
-      <Container>
       <Image src={props.imageUrl} alt={props.description} title={props.title} rounded fluid></Image>
-        <p>{props.description}</p>
-        <h3>Favorites: {"❤️"} {likes}</h3>
-      </Container>
+      <p>{props.description}</p>
+      <h3>Favorites: {"❤️"} {likes}</h3>
     </div>
   );
 }
