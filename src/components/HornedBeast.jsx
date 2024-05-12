@@ -14,7 +14,7 @@ function HornedBeast(props) {
       <h2>{props.title}</h2>
       <Image src={props.imageUrl} alt={props.description} title={props.title} rounded fluid></Image>
       <p>{props.description}</p>
-      <h3>Favorites: {"❤️"} {likes}</h3>
+      <h3>Favorites: {"❤️"} = {likes}</h3>
     </div>
   );
 }
