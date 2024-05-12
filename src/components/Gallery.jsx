@@ -27,7 +27,7 @@ export default function Gallery() {
     ));
 
     return (
-      <Row>
+      <Row className="justify-content-center">
         {beastComponents}
       </Row>
     );

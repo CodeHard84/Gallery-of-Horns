@@ -1,5 +1,14 @@
+import React from 'react';
+import { Navbar, Container } from 'react-bootstrap';
+
 export default function Header() {
-    return(
-        <h1>Gallery of Horns</h1>
-    )
+    const title = "Gallery of Horns";
+
+    return (
+        <Navbar bg="dark" variant="dark">
+            <Container>
+                <Navbar.Brand href="#home">{title}</Navbar.Brand>
+            </Container>
+        </Navbar>
+    );
 }
